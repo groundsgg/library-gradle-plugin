@@ -16,7 +16,7 @@ fun Project.configureShadowPackaging() {
     tasks.named("jar", Jar::class.java) { task -> task.enabled = false }
 
     tasks.named("shadowJar", ShadowJar::class.java) { task ->
-        task.archiveBaseName.set(rootProject.name)
+        task.archiveBaseName.set("${rootProject.name}-${project.name}")
         task.archiveClassifier.set("")
         task.archiveVersion.set("")
     }
