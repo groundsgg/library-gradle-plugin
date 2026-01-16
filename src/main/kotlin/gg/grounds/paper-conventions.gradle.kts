@@ -1,8 +1,6 @@
 package gg.grounds
 
-plugins {
-    id("gg.grounds.paper-base-conventions")
-}
+plugins { id("gg.grounds.paper-base-conventions") }
 
 repositories { maven("https://repo.papermc.io/repository/maven-public/") }
 

@@ -4,8 +4,8 @@ import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 
 plugins {
     `maven-publish`
-    kotlin
-    `kotlin-kapt`
+    id("org.jetbrains.kotlin.jvm")
+    id("org.jetbrains.kotlin.kapt")
     id("gg.grounds.base-conventions")
 }
 

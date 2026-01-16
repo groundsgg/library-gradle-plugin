@@ -14,6 +14,8 @@ repositories {
 }
 
 dependencies {
+    implementation("org.jetbrains.kotlin.jvm:org.jetbrains.kotlin.jvm.gradle.plugin:2.3.0")
+    implementation("org.jetbrains.kotlin.kapt:org.jetbrains.kotlin.kapt.gradle.plugin:2.3.0")
     implementation("com.diffplug.spotless:com.diffplug.spotless.gradle.plugin:8.1.0")
     implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:9.3.1")
     implementation(
@@ -22,6 +24,7 @@ dependencies {
 }
 
 val versionOverride = project.findProperty("versionOverride") as? String
+
 version = versionOverride ?: "local-SNAPSHOT"
 
 repositories { mavenCentral() }
