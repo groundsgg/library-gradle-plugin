@@ -68,7 +68,7 @@ The diagram only shows the names without their prefixes.
 
 ## Troubleshooting
 
-### IntelliJ underline some things red
+### IntelliJ underlines some things red
 
 This happens because IntellIJ cannot find the type safe script accessors.
 This can be fixed by first running `gradle clean`, 
