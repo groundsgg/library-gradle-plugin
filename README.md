@@ -1,16 +1,10 @@
 # library-gradle-plugin
 
-Gradle plugin bundle for Grounds projects.
-
-## Plugins
-
-- `gg.grounds.root`: shared repo configuration (Kotlin, publishing, Spotless, test logging, ...).
-- `gg.grounds.paper`: Paper server plugin defaults (Paper repo, shadow packaging, Paper API dep, ...).
-- `gg.grounds.velocity`: Velocity proxy plugin defaults (Paper repo, shadow packaging, Velocity API deps, BuildConfig, ...).
+Gradle convention plugins for Grounds projects.
 
 ## Usage
 
-## Recommended setup (GitHub Packages)
+### Making the plugins available to your project
 
 Add the GitHub Packages repo to `pluginManagement` so Gradle can resolve the
 `gg.grounds.*` plugins via the `plugins {}` block.
@@ -32,11 +26,13 @@ pluginManagement {
 }
 ```
 
-Kotlin DSL (`build.gradle.kts`):
+### Add the appropriate convention plugin
+
+For just Kotlin projects (usually the `common` module)
 
 ```kotlin
 plugins {
-    id("gg.grounds.root") version "0.1.0"
+    id("gg.grounds.kotlin-conventions") version "VERSION"
 }
 ```
 
@@ -44,7 +40,7 @@ For Paper subprojects:
 
 ```kotlin
 plugins {
-    id("gg.grounds.paper") version "0.1.0"
+    id("gg.grounds.paper-conventions") version "VERSION"
 }
 ```
 
@@ -52,19 +48,44 @@ For Velocity subprojects:
 
 ```kotlin
 plugins {
-    id("gg.grounds.velocity") version "0.1.0"
+    id("gg.grounds.velocity-conventions") version "VERSION"
 }
 ```
 
-## Extension
+## Plugins
 
-Both `gg.grounds.paper` and `gg.grounds.velocity` use the same `grounds` extension.
-Set `addDependencies` to control whether the plugin adds the Paper/Velocity API dependencies.
+![](plugin-hierarchy.svg)
 
-Kotlin DSL (`build.gradle.kts`):
+A convention plugin defines shared configuration.
+The diagram above shows the relation between the configuration plugins.
+The diagram only shows the names without their prefixes.
+
+- `base-conventions`: Setups spotless, common repositories (maven central) and version override 
+- `kotlin-conventions`: Setups all Kotlin related configurations
+- `paper-base-conventions`: Common configuration for velocity and paper plugins
+- `paper-conventions`: Paper server plugin defaults (Paper repo, shadow packaging, Paper API dep, ...)
+- `velocity-conventions`: Velocity proxy plugin defaults (Paper repo, shadow packaging, Velocity API deps, BuildConfig, ...)
+
+## Troubleshooting
+
+### IntelliJ underline some things red
+
+This happens because IntellIJ cannot find the type safe script accessors.
+This can be fixed by first running `gradle clean`, 
+then `gradle generatePrecompiledScriptPluginAccessors` 
+and lastly tell IntellIJ to sync the Gradle Project again.
+
+If it still does not work, you can use `configure<EXTENSION CLASS>`
+For that you need to find the name of the Extension Class.
+You can either try to guess it (for example, the `spotless` extension probable has spotless in its name).
+Alternatively, you can add the plugin to a regular Gradle project, and make CTRL + Left Click to see the Extensions class name.
+
+To make sure it is just an IntelliJ error, try to build (`gradle build`) the project.
 
 ```kotlin
-grounds {
-    addDependencies.set(false)
+// Example to configure spotless (which is equivalent to just write `spotless`) 
+
+configure<SpotlessExtension> {
+
 }
 ```
