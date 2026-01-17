@@ -11,11 +11,6 @@ plugins {
 
 kotlin { jvmToolchain(25) }
 
-java {
-    withSourcesJar()
-    withJavadocJar()
-}
-
 tasks.test {
     useJUnitPlatform()
     testLogging { exceptionFormat = TestExceptionFormat.FULL }
