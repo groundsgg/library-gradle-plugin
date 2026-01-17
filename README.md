@@ -52,9 +52,20 @@ plugins {
 }
 ```
 
-## Plugins
+## Migration Guide from 0.1.x to 0.2.x
 
-![](plugin-hierarchy.svg)
+The `gg.grounds.root` plugin does not exist anymore. Remove it.
+All necessary configuration is configured by the respective convention plugins.
+
+| Old plugin name | Migration steps                                                                                                                                                                                                                                 | 
+| - |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `gg.grounds.root` | If you have subprojects that apply `gg.grounds.paper` or `gg.grounds.velocity`, just remove the `gg.grounds.root` plugin. <br> If code is only in the `src` directory and you don't need paper or velocity, use `gg.grounds.kotlin-conventions` |
+| `gg.grounds.paper` | Use `gg.grounds.paper-conventions` instead                                                                                                                                                                                                      |
+| `gg.grounds.velocity` | Use `gg.grounds.velocity-conventions` instead                                                                                                                                                                                                   |
+
+## Plugins Hierarchy
+
+![](docs_images/plugin_hierarchy.svg)
 
 A convention plugin defines shared configuration.
 The diagram above shows the relation between the configuration plugins.
@@ -70,12 +81,15 @@ The diagram only shows the names without their prefixes.
 
 ### IntelliJ underlines some things red
 
-This happens because IntellIJ cannot find the type safe script accessors.
-This can be fixed by first running `gradle clean`, 
-then `gradle generatePrecompiledScriptPluginAccessors` 
-and lastly tell IntellIJ to sync the Gradle Project again.
+![](docs_images/error_screenshot.png)
 
-If it still does not work, you can use `configure<EXTENSION CLASS>`
+This happens because IntelliJ cannot find the type safe script accessors.
+This is only an IntelliJ error, building the plugins does not result in an error.
+The error can be fixed by first running `gradle clean`, 
+then `gradle generatePrecompiledScriptPluginAccessors` 
+and lastly tell IntelliJ to sync the Gradle Project again.
+
+If it still does not work, you can use `configure<EXTENSION CLASS>`.
 For that you need to find the name of the Extension Class.
 You can either try to guess it (for example, the `spotless` extension probable has spotless in its name).
 Alternatively, you can add the plugin to a regular Gradle project, and make CTRL + Left Click to see the Extensions class name.
