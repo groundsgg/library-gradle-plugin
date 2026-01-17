@@ -36,7 +36,7 @@ plugins {
 }
 ```
 
-For Paper subprojects:
+For Paper projects:
 
 ```kotlin
 plugins {
@@ -44,7 +44,7 @@ plugins {
 }
 ```
 
-For Velocity subprojects:
+For Velocity projects:
 
 ```kotlin
 plugins {

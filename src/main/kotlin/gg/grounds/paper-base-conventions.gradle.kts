@@ -11,9 +11,9 @@ repositories { maven("https://repo.papermc.io/repository/maven-public/") }
 
 tasks.named("build") { dependsOn("shadowJar") }
 
-tasks.withType<Jar> { enabled = false }
+tasks.named("jar") { enabled = false }
 
-tasks.withType<ShadowJar> {
+tasks.named<ShadowJar>("shadowJar") {
     archiveBaseName.set("${rootProject.name}-${project.name}")
     archiveClassifier.set("")
     archiveVersion.set("")
