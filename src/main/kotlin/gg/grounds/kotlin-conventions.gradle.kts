@@ -1,19 +1,8 @@
 package gg.grounds
 
-import org.gradle.api.tasks.testing.logging.TestExceptionFormat
-
 plugins {
     `maven-publish`
-    id("org.jetbrains.kotlin.jvm")
-    id("org.jetbrains.kotlin.kapt")
     id("gg.grounds.base-conventions")
-}
-
-kotlin { jvmToolchain(25) }
-
-tasks.test {
-    useJUnitPlatform()
-    testLogging { exceptionFormat = TestExceptionFormat.FULL }
 }
 
 publishing {
