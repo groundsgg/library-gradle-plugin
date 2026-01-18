@@ -52,7 +52,25 @@ plugins {
 }
 ```
 
+### Overriding paper or velocity version
+
+The consumer Gradle project can request a higher paper or velocity version, but **not** a lower one.
+
+- The current Paper version: 1.21.11-R0.1-SNAPSHOT
+- The current Velocity version: 3.4.0-SNAPSHOT
+
+```kotlin
+// Example for Override
+
+dependencies {
+    // This will override the current version with 1.21.12-R0.1-SNAPSHOT
+    compileOnly("io.papermc.paper:paper-api:1.21.12-R0.1-SNAPSHOT")
+}
+```
+
 ## Migration Guide from 0.1.x to 0.2.x
+
+### Plugin Migration
 
 The `gg.grounds.root` plugin does not exist anymore. Remove it.
 All necessary configuration is configured by the respective convention plugins.
@@ -62,6 +80,20 @@ All necessary configuration is configured by the respective convention plugins.
 | `gg.grounds.root` | If you have subprojects that apply `gg.grounds.paper` or `gg.grounds.velocity`, just remove the `gg.grounds.root` plugin. <br> If code is only in the `src` directory and you don't need paper or velocity, use `gg.grounds.kotlin-conventions` |
 | `gg.grounds.paper` | Use `gg.grounds.paper-conventions` instead                                                                                                                                                                                                      |
 | `gg.grounds.velocity` | Use `gg.grounds.velocity-conventions` instead                                                                                                                                                                                                   |
+
+### Extension Migration 
+
+The `GroundsExtension` is not required and was removed therefore, since Gradle allows version overriding (at least for higher versions) out of the box.
+If a newer paper or velocity version is required, it can just be added to the dependencies.
+
+```kotlin
+// Example for Override
+
+dependencies {
+    // This will override the current version with 1.21.12-R0.1-SNAPSHOT
+    compileOnly("io.papermc.paper:paper-api:1.21.12-R0.1-SNAPSHOT") 
+}
+```
 
 ## Plugins Hierarchy
 
