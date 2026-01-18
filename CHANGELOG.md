@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.1.1...v0.2.0) (2026-01-18)
+
+
+### Features
+
+* migrate to convention plugin ([#7](https://github.com/groundsgg/library-gradle-plugin/issues/7)) ([05c4a83](https://github.com/groundsgg/library-gradle-plugin/commit/05c4a83fae3a8df6e23c25ec5c5ac98303dab08f))
+
 ## [0.1.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.1.0...v0.1.1) (2026-01-04)
 
 
