@@ -28,11 +28,21 @@ pluginManagement {
 
 ### Add the appropriate convention plugin
 
-For just Kotlin projects (usually the `common` module)
+In your `build.gradle.kts`, apply the convention plugin that fits your project type. Only set the version on `gg.grounds.base-conventions`, other `gg.grounds.*-conventions` plugins must omit the version.
+
+For all projects (base configuration):
 
 ```kotlin
 plugins {
-    id("gg.grounds.kotlin-conventions") version "VERSION"
+    id("gg.grounds.base-conventions") version "VERSION"
+}
+```
+
+For just Kotlin projects (usually the `common` module):
+
+```kotlin
+plugins {
+    id("gg.grounds.kotlin-conventions")
 }
 ```
 
@@ -40,7 +50,7 @@ For Paper projects:
 
 ```kotlin
 plugins {
-    id("gg.grounds.paper-conventions") version "VERSION"
+    id("gg.grounds.paper-conventions")
 }
 ```
 
@@ -48,7 +58,7 @@ For Velocity projects:
 
 ```kotlin
 plugins {
-    id("gg.grounds.velocity-conventions") version "VERSION"
+    id("gg.grounds.velocity-conventions")
 }
 ```
 
@@ -56,7 +66,7 @@ For Minestom projects:
 
 ```kotlin
 plugins {
-    id("gg.grounds.minestom-conventions") version "VERSION"
+    id("gg.grounds.minestom-conventions")
 }
 ```
 
@@ -84,11 +94,11 @@ dependencies {
 The `gg.grounds.root` plugin does not exist anymore. Remove it.
 All necessary configuration is configured by the respective convention plugins.
 
-| Old plugin name | Migration steps                                                                                                                                                                                                                                 | 
-| - |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `gg.grounds.root` | If you have subprojects that apply `gg.grounds.paper` or `gg.grounds.velocity`, just remove the `gg.grounds.root` plugin. <br> If code is only in the `src` directory and you don't need paper or velocity, use `gg.grounds.kotlin-conventions` |
-| `gg.grounds.paper` | Use `gg.grounds.paper-conventions` instead                                                                                                                                                                                                      |
-| `gg.grounds.velocity` | Use `gg.grounds.velocity-conventions` instead                                                                                                                                                                                                   |
+| Old plugin name       | Migration steps                               | 
+|-----------------------|-----------------------------------------------|
+| `gg.grounds.root`     | Use `gg.grounds.base-conventions` instead.    |
+| `gg.grounds.paper`    | Use `gg.grounds.paper-conventions` instead    |
+| `gg.grounds.velocity` | Use `gg.grounds.velocity-conventions` instead |
 
 ### Extension Migration 
 
