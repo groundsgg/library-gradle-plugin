@@ -52,12 +52,21 @@ plugins {
 }
 ```
 
-### Overriding paper or velocity version
+For Minestom projects:
+
+```kotlin
+plugins {
+    id("gg.grounds.minestom-conventions") version "VERSION"
+}
+```
+
+### Overriding paper, velocity or minestom version
 
 The consumer Gradle project can request a higher paper or velocity version, but **not** a lower one.
 
 - The current Paper version: 1.21.11-R0.1-SNAPSHOT
 - The current Velocity version: 3.4.0-SNAPSHOT
+- The current Minestom version: 2026.01.08-1.21.11
 
 ```kotlin
 // Example for Override
@@ -97,7 +106,14 @@ dependencies {
 
 ## Plugins Hierarchy
 
-![](docs_images/plugin_hierarchy.svg)
+```mermaid
+graph TB
+  kotlin["kotlin-conventions"] --> base["base-conventions"]
+  minestom["minestom-conventions"] --> kotlin
+  paperbase["paper-base-conventions"] --> kotlin
+  paper["paper-conventions"] --> paperbase
+  velocity["velocity-conventions"] --> paperbase
+```
 
 A convention plugin defines shared configuration.
 The diagram above shows the relation between the configuration plugins.
@@ -105,6 +121,7 @@ The diagram only shows the names without their prefixes.
 
 - `base-conventions`: Setups spotless, common repositories (maven central) and version override 
 - `kotlin-conventions`: Setups all Kotlin related configurations
+- `minestom-conventions`: Minestom server plugin defaults (Minestom repo)
 - `paper-base-conventions`: Common configuration for velocity and paper plugins
 - `paper-conventions`: Paper server plugin defaults (Paper repo, shadow packaging, Paper API dep, ...)
 - `velocity-conventions`: Velocity proxy plugin defaults (Paper repo, shadow packaging, Velocity API deps, BuildConfig, ...)

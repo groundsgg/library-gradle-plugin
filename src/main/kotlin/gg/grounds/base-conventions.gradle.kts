@@ -20,6 +20,7 @@ repositories { mavenCentral() }
 project.group = "gg.grounds"
 
 val versionOverride = project.project.findProperty("versionOverride") as? String
+
 project.version = versionOverride ?: "local-SNAPSHOT"
 
 spotless {
