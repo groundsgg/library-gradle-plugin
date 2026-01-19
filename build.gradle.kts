@@ -28,6 +28,7 @@ dependencies {
     implementation(
         "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin:6.0.7"
     )
+    implementation("com.google.protobuf:com.google.protobuf.gradle.plugin:0.9.6")
 }
 
 val versionOverride = project.findProperty("versionOverride") as? String
