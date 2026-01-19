@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.2.0...v0.3.0) (2026-01-19)
+
+
+### Features
+
+* add grpc-conventions plugin ([#12](https://github.com/groundsgg/library-gradle-plugin/issues/12)) ([3e37e26](https://github.com/groundsgg/library-gradle-plugin/commit/3e37e26e867f48aab41b5c62ebe2a7943971dd81))
+
 ## [0.2.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.1.1...v0.2.0) (2026-01-18)
 
 
