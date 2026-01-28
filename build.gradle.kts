@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("com.diffplug.spotless") version "8.2.0"
+    id("com.diffplug.spotless") version "8.2.1"
     `java-gradle-plugin`
     `maven-publish`
     `kotlin-dsl`
