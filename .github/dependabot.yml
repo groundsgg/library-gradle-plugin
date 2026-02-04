@@ -5,6 +5,13 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    commit-message:
+      prefix: "fix"
+    groups:
+      spotless:
+        patterns:
+          - "com.diffplug.spotless"
+          - "com.diffplug.spotless:com.diffplug.spotless.gradle.plugin"
   # Monitor GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
