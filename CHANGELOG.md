@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.0...v0.3.1) (2026-02-04)
+
+
+### Bug Fixes
+
+* **deps:** bump com.diffplug.spotless from 8.1.0 to 8.2.0 ([#14](https://github.com/groundsgg/library-gradle-plugin/issues/14)) ([8b81428](https://github.com/groundsgg/library-gradle-plugin/commit/8b81428ac3264cdfb987b2f7fb3efa07ef87b9c5))
+* **deps:** bump gradle-wrapper from 9.3.0 to 9.3.1 ([#20](https://github.com/groundsgg/library-gradle-plugin/issues/20)) ([7cfb62e](https://github.com/groundsgg/library-gradle-plugin/commit/7cfb62e99820a593f884bead10124736d1995cd2))
+* **deps:** bump spotless from 8.2.0 to 8.2.1 ([#18](https://github.com/groundsgg/library-gradle-plugin/issues/18),[#19](https://github.com/groundsgg/library-gradle-plugin/issues/19)) ([5a6dec1](https://github.com/groundsgg/library-gradle-plugin/commit/5a6dec118ccd504288eac900b6d516bf74d5dc9e))
+
 ## [0.3.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.2.0...v0.3.0) (2026-01-19)
 
 
