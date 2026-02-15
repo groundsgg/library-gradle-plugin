@@ -9,7 +9,7 @@ val grpcVersion = "1.78.0"
 val protobufVersion = "4.29.0"
 
 dependencies {
-    api("com.google.protobuf:protobuf-java:${protobufVersion}")
+    compileOnly("com.google.protobuf:protobuf-java:${protobufVersion}")
     implementation("io.grpc:grpc-protobuf:${grpcVersion}")
     implementation("io.grpc:grpc-stub:${grpcVersion}")
 }
