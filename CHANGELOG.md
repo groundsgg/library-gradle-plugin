@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.1...v0.3.2) (2026-02-15)
+
+
+### Bug Fixes
+
+* set protobuf-java to compileonly ([#22](https://github.com/groundsgg/library-gradle-plugin/issues/22)) ([fcbd17c](https://github.com/groundsgg/library-gradle-plugin/commit/fcbd17cf727aab4ea64c0a2bb5199badb3b61b0c))
+
 ## [0.3.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.0...v0.3.1) (2026-02-15)
 
 
