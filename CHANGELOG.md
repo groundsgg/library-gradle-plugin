@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.1...v0.3.2) (2026-03-02)
+
+
+### Bug Fixes
+
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#24](https://github.com/groundsgg/library-gradle-plugin/issues/24)) ([db29342](https://github.com/groundsgg/library-gradle-plugin/commit/db29342069ac91c39d0b64f496792a782b48e13f))
+* set protobuf-java to compileonly ([#22](https://github.com/groundsgg/library-gradle-plugin/issues/22)) ([fcbd17c](https://github.com/groundsgg/library-gradle-plugin/commit/fcbd17cf727aab4ea64c0a2bb5199badb3b61b0c))
+
 ## [0.3.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.0...v0.3.1) (2026-02-15)
 
 
