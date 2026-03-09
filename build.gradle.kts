@@ -26,7 +26,7 @@ dependencies {
     implementation("com.diffplug.spotless:com.diffplug.spotless.gradle.plugin:8.2.1")
     implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:9.3.2")
     implementation(
-        "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin:6.0.7"
+        "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin:6.0.9"
     )
     implementation("com.google.protobuf:com.google.protobuf.gradle.plugin:0.9.6")
 }
