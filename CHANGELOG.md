@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.3.3](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.2...v0.3.3) (2026-03-11)
+
+
+### Bug Fixes
+
+* bump com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin ([#29](https://github.com/groundsgg/library-gradle-plugin/issues/29)) ([de2c120](https://github.com/groundsgg/library-gradle-plugin/commit/de2c120d4abd705db900509cfef2797ac26fa874))
+* bump gradle-wrapper from 9.3.1 to 9.4.0 ([#27](https://github.com/groundsgg/library-gradle-plugin/issues/27)) ([0adf3bb](https://github.com/groundsgg/library-gradle-plugin/commit/0adf3bbb357fbd6ac754c42bc76d1bc4b5a765a9))
+* bump the spotless group with 2 updates ([#26](https://github.com/groundsgg/library-gradle-plugin/issues/26)) ([39fd09f](https://github.com/groundsgg/library-gradle-plugin/commit/39fd09f5c5d29f6a11110811e094f6e209a1ab45))
+
 ## [0.3.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.1...v0.3.2) (2026-03-02)
 
 
