@@ -24,7 +24,7 @@ dependencies {
         "org.jetbrains.kotlin.kapt:org.jetbrains.kotlin.kapt.gradle.plugin:$embeddedKotlinVersion"
     )
     implementation("com.diffplug.spotless:com.diffplug.spotless.gradle.plugin:8.3.0")
-    implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:9.3.2")
+    implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:9.4.0")
     implementation(
         "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin:6.0.9"
     )
