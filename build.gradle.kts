@@ -1,6 +1,4 @@
 import org.gradle.kotlin.dsl.embeddedKotlinVersion
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("com.diffplug.spotless") version "8.4.0"
@@ -38,15 +36,6 @@ version = versionOverride ?: "local-SNAPSHOT"
 repositories { mavenCentral() }
 
 kotlin { jvmToolchain(25) }
-
-java {
-    sourceCompatibility = JavaVersion.VERSION_24
-    targetCompatibility = JavaVersion.VERSION_24
-}
-
-tasks.withType<JavaCompile>().configureEach { options.release.set(24) }
-
-tasks.withType<KotlinCompile>().configureEach { compilerOptions.jvmTarget.set(JvmTarget.JVM_24) }
 
 spotless {
     kotlin {
