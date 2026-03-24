@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.4...v0.4.0) (2026-03-24)
+
+
+### Features
+
+* remove jvm downgrade workaround to java 24 ([#35](https://github.com/groundsgg/library-gradle-plugin/issues/35)) ([a43e029](https://github.com/groundsgg/library-gradle-plugin/commit/a43e029350addf905c673e310a6c9f5f02e654ea))
+
 ## [0.3.4](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.3...v0.3.4) (2026-03-22)
 
 
