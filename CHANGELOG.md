@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.0...v0.4.1) (2026-03-30)
+
+
+### Bug Fixes
+
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#38](https://github.com/groundsgg/library-gradle-plugin/issues/38)) ([fc701c0](https://github.com/groundsgg/library-gradle-plugin/commit/fc701c09950c2f3bf9dca26ba894bd5b296687f5))
+
 ## [0.4.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.3.4...v0.4.0) (2026-03-24)
 
 
