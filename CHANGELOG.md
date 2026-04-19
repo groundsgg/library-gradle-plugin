@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.4.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.1...v0.4.2) (2026-04-19)
+
+
+### Bug Fixes
+
+* update grpc version ([#40](https://github.com/groundsgg/library-gradle-plugin/issues/40)) ([828207d](https://github.com/groundsgg/library-gradle-plugin/commit/828207d1534fe79119c147a5e881639a436de9dd))
+* update velocity and minestom ([#42](https://github.com/groundsgg/library-gradle-plugin/issues/42)) ([085aea8](https://github.com/groundsgg/library-gradle-plugin/commit/085aea86528124a387a6f2620a30616255390dc3))
+
 ## [0.4.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.0...v0.4.1) (2026-03-30)
 
 
