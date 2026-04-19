@@ -5,8 +5,8 @@ plugins {
     id("com.google.protobuf")
 }
 
-val grpcVersion = "1.78.0"
-val protobufVersion = "4.29.0"
+val grpcVersion = "1.80.0"
+val protobufVersion = "4.34.1"
 
 dependencies {
     compileOnly("com.google.protobuf:protobuf-java:${protobufVersion}")
