@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.0...v0.5.1) (2026-04-19)
+
+
+### Bug Fixes
+
+* move relocation from grpc module to paper base convention module ([#45](https://github.com/groundsgg/library-gradle-plugin/issues/45)) ([dc4d0ff](https://github.com/groundsgg/library-gradle-plugin/commit/dc4d0ffeaee10539dee95724c95c462e545af862))
+
 ## [0.5.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.2...v0.5.0) (2026-04-19)
 
 
