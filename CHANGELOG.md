@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.2...v0.5.0) (2026-04-19)
+
+
+### Features
+
+* relocate protobuf dep ([#43](https://github.com/groundsgg/library-gradle-plugin/issues/43)) ([8470b4e](https://github.com/groundsgg/library-gradle-plugin/commit/8470b4e52f008c46b13fd059767a3f35b6604201))
+
 ## [0.4.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.4.1...v0.4.2) (2026-04-19)
 
 
