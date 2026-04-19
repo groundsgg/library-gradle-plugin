@@ -1,7 +1,5 @@
 package gg.grounds
 
-import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
-
 plugins {
     id("gg.grounds.kotlin-conventions")
     id("com.google.protobuf")
@@ -22,10 +20,4 @@ protobuf {
     plugins { create("grpc") { artifact = "io.grpc:protoc-gen-grpc-java:$grpcVersion" } }
 
     generateProtoTasks { all().configureEach { plugins { create("grpc") } } }
-}
-
-pluginManager.withPlugin("com.gradleup.shadow") {
-    tasks.named<ShadowJar>("shadowJar") {
-        relocate("com.google.protobuf", "gg.grounds.shaded.protobuf")
-    }
 }
