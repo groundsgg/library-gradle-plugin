@@ -141,7 +141,7 @@ The diagram only shows the names without their prefixes.
 - `base-conventions`: Setups spotless, common repositories (maven central) and version override 
 - `kotlin-conventions`: Setups all Kotlin related configurations
 - `minestom-conventions`: Minestom server plugin defaults (Minestom repo)
-- `grpc-conventions`: Common configuration for gRPC
+- `grpc-conventions`: Common configuration for gRPC; relocates `com.google.protobuf` to `gg.grounds.shaded.protobuf` only when Shadow packaging is also applied, so final shaded Paper/Velocity jars carry their own protobuf classes without affecting plain library modules
 - `paper-base-conventions`: Common configuration for velocity and paper plugins
 - `paper-conventions`: Paper server plugin defaults (Paper repo, shadow packaging, Paper API dep, ...)
 - `velocity-conventions`: Velocity proxy plugin defaults (Paper repo, shadow packaging, Velocity API deps, BuildConfig, ...)
