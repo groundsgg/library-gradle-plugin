@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.5.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.1...v0.5.2) (2026-05-01)
+
+
+### Bug Fixes
+
+* bump com.google.protobuf:com.google.protobuf.gradle.plugin ([#47](https://github.com/groundsgg/library-gradle-plugin/issues/47)) ([f984ac8](https://github.com/groundsgg/library-gradle-plugin/commit/f984ac824d5dfe8e2fe92c9cbe6779a7a00dd379))
+* bump gradle-wrapper from 9.4.1 to 9.5.0 ([#50](https://github.com/groundsgg/library-gradle-plugin/issues/50)) ([8f5898e](https://github.com/groundsgg/library-gradle-plugin/commit/8f5898e627e2ff37be82198d4fceb817fb2cb9c1))
+* update grpc version ([#51](https://github.com/groundsgg/library-gradle-plugin/issues/51)) ([145cf36](https://github.com/groundsgg/library-gradle-plugin/commit/145cf362f5ba88848ca1f3282e6a853f4f015267))
+
 ## [0.5.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.0...v0.5.1) (2026-04-19)
 
 
