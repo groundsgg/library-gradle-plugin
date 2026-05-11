@@ -82,7 +82,7 @@ plugins {
 
 The consumer Gradle project can request a higher paper or velocity version, but **not** a lower one.
 
-- The current Paper version: 1.21.11-R0.1-SNAPSHOT
+- The current Paper version: 26.1.2.build.63-stable
 - The current Velocity version: 3.4.0-SNAPSHOT
 - The current Minestom version: 2026.01.08-1.21.11
 
@@ -90,8 +90,8 @@ The consumer Gradle project can request a higher paper or velocity version, but 
 // Example for Override
 
 dependencies {
-    // This will override the current version with 1.21.12-R0.1-SNAPSHOT
-    compileOnly("io.papermc.paper:paper-api:1.21.12-R0.1-SNAPSHOT")
+    // This will override the current version with a newer Paper build
+    compileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
 }
 ```
 
@@ -117,8 +117,8 @@ If a newer paper or velocity version is required, it can just be added to the de
 // Example for Override
 
 dependencies {
-    // This will override the current version with 1.21.12-R0.1-SNAPSHOT
-    compileOnly("io.papermc.paper:paper-api:1.21.12-R0.1-SNAPSHOT") 
+    // This will override the current version with a newer Paper build
+    compileOnly("io.papermc.paper:paper-api:26.1.2.build.+")
 }
 ```
 
