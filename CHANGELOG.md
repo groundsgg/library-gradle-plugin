@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.2...v0.6.0) (2026-05-11)
+
+
+### Features
+
+* update conventions for Paper 26.1.2 ([#52](https://github.com/groundsgg/library-gradle-plugin/issues/52)) ([a5485e2](https://github.com/groundsgg/library-gradle-plugin/commit/a5485e2339cef389e092e1ea46ba521a43a2384d))
+
 ## [0.5.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.1...v0.5.2) (2026-05-01)
 
 
