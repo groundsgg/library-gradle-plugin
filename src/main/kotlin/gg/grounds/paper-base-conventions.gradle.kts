@@ -17,5 +17,4 @@ tasks.named<ShadowJar>("shadowJar") {
     archiveBaseName.set("${rootProject.name}-${project.name}")
     archiveClassifier.set("")
     archiveVersion.set("")
-    relocate("com.google.protobuf", "gg.grounds.shaded.protobuf")
 }

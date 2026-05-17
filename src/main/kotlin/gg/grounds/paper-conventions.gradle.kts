@@ -1,14 +1,3 @@
 package gg.grounds
 
-plugins { id("gg.grounds.paper-base-conventions") }
-
-repositories { maven("https://repo.papermc.io/repository/maven-public/") }
-
-dependencies { compileOnly("io.papermc.paper:paper-api:26.1.2.build.63-stable") }
-
-val pluginVersion: Any = project.version
-
-tasks.withType<ProcessResources> {
-    inputs.property("version", pluginVersion)
-    filesMatching(listOf("**/plugin.yml")) { expand(mapOf("VERSION" to pluginVersion)) }
-}
+plugins { id("gg.grounds.paper-standalone-conventions") }
