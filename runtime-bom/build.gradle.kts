@@ -1,3 +1,5 @@
+import groovy.json.JsonSlurper
+
 plugins {
     `java-platform`
     `maven-publish`
@@ -11,18 +13,42 @@ version = versionOverride ?: "local-SNAPSHOT"
 
 javaPlatform { allowDependencies() }
 
+val runtimeCatalogFile =
+    rootProject.layout.projectDirectory.file("runtime-catalog/grounds-runtime-libraries.json")
+
+data class CatalogRuntimeLibrary(val group: String, val name: String, val version: String)
+
+fun runtimeLibraries(): List<CatalogRuntimeLibrary> {
+    val catalog =
+        (JsonSlurper().parse(runtimeCatalogFile.asFile) as? Map<*, *>)
+            ?: error("Runtime catalog must be a JSON object")
+    val libraries =
+        (catalog["libraries"] as? List<*>)
+            ?: error("Runtime catalog field libraries must be an array")
+
+    return libraries.mapIndexed { index, value ->
+        val runtimeLibrary =
+            (value as? Map<*, *>)
+                ?: error("Runtime catalog field libraries[$index] must be an object")
+        CatalogRuntimeLibrary(
+            group =
+                runtimeLibrary["group"] as? String
+                    ?: error("Runtime catalog field libraries[$index].group must be a string"),
+            name =
+                runtimeLibrary["name"] as? String
+                    ?: error("Runtime catalog field libraries[$index].name must be a string"),
+            version =
+                runtimeLibrary["version"] as? String
+                    ?: error("Runtime catalog field libraries[$index].version must be a string"),
+        )
+    }
+}
+
 dependencies {
     constraints {
-        api("org.jetbrains.kotlin:kotlin-stdlib:2.3.0")
-        api("org.jetbrains.kotlin:kotlin-stdlib-jdk8:2.3.0")
-        api("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.10.2")
-        api("com.google.protobuf:protobuf-java:4.34.1")
-        api("io.grpc:grpc-api:1.81.0")
-        api("io.grpc:grpc-core:1.81.0")
-        api("io.grpc:grpc-context:1.81.0")
-        api("io.grpc:grpc-stub:1.81.0")
-        api("io.grpc:grpc-protobuf:1.81.0")
-        api("io.grpc:grpc-netty-shaded:1.81.0")
+        runtimeLibraries().forEach { runtimeLibrary ->
+            api("${runtimeLibrary.group}:${runtimeLibrary.name}:${runtimeLibrary.version}")
+        }
     }
 }
 
