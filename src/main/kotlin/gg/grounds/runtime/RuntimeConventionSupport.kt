@@ -52,27 +52,63 @@ fun Project.configureVelocityRuntimeConvention(flavor: RuntimeConventionFlavor) 
 
 private fun Project.configureRuntimeFlavor(flavor: RuntimeConventionFlavor) {
     val extension = extensions.create<GroundsRuntimeExtension>("groundsRuntime")
+    extension.runtimeVersion.convention(
+        providers.gradleProperty("groundsRuntime.version").orElse("0.1.0")
+    )
 
     when (flavor) {
         RuntimeConventionFlavor.Standalone ->
             configureShadowRelocations(RuntimeLibraries.standaloneRelocations)
         RuntimeConventionFlavor.RuntimeConsumer -> {
-            addSharedRuntimeDependencies("compileOnly")
+            addSharedRuntimeDependencies("compileOnly", extension)
             configureShadowRelocations(RuntimeLibraries.runtimeRelocations)
             excludeSharedRuntimeDependenciesFromShadowJar()
             registerBundledSharedRuntimeValidation(extension)
         }
         RuntimeConventionFlavor.RuntimeProvider -> {
-            addSharedRuntimeDependencies("implementation")
+            addSharedRuntimeDependencies("implementation", extension)
             configureShadowRelocations(RuntimeLibraries.runtimeRelocations)
         }
     }
 }
 
-private fun Project.addSharedRuntimeDependencies(configurationName: String) {
-    dependencies {
-        RuntimeLibraries.shared.forEach { runtimeLibrary ->
-            add(configurationName, runtimeLibrary.notation)
+private fun Project.addSharedRuntimeDependencies(
+    configurationName: String,
+    extension: GroundsRuntimeExtension,
+) {
+    configureRuntimeRepositories()
+    val dependencyHandler = dependencies
+
+    configurations.named(configurationName) {
+        withDependencies {
+            add(
+                dependencyHandler.platform(
+                    "gg.grounds:grounds-runtime-bom:${extension.runtimeVersion.get()}"
+                )
+            )
+            RuntimeLibraries.shared.forEach { runtimeLibrary ->
+                add(dependencyHandler.create(runtimeLibrary.notation))
+            }
+        }
+    }
+}
+
+private fun Project.configureRuntimeRepositories() {
+    repositories.mavenLocal()
+    repositories.maven {
+        name = "GroundsGitHubPackages"
+        url = uri("https://maven.pkg.github.com/groundsgg/*")
+        credentials {
+            username =
+                providers
+                    .gradleProperty("github.user")
+                    .orElse(providers.environmentVariable("GITHUB_ACTOR"))
+                    .orNull
+            password =
+                providers
+                    .gradleProperty("github.token")
+                    .orElse(providers.environmentVariable("GITHUB_TOKEN"))
+                    .orNull
         }
     }
 }
