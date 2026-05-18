@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.7.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.6.0...v0.7.0) (2026-05-18)
+
+
+### Features
+
+* consume grounds runtime platform ([#57](https://github.com/groundsgg/library-gradle-plugin/issues/57)) ([cbd24b9](https://github.com/groundsgg/library-gradle-plugin/commit/cbd24b96a257b7ee2835d336a76f750da035318e))
+
+
+### Bug Fixes
+
+* bump gradle-wrapper from 9.5.0 to 9.5.1 ([#54](https://github.com/groundsgg/library-gradle-plugin/issues/54)) ([50454f3](https://github.com/groundsgg/library-gradle-plugin/commit/50454f3f87345bb1495d868ad0c4a34e571314d4))
+* bump the spotless group with 2 updates ([#55](https://github.com/groundsgg/library-gradle-plugin/issues/55)) ([f62e530](https://github.com/groundsgg/library-gradle-plugin/commit/f62e5305b6bc67644e4df76d918a976bf6d9ebc5))
+* bump the spotless group with 2 updates ([#58](https://github.com/groundsgg/library-gradle-plugin/issues/58)) ([97be19f](https://github.com/groundsgg/library-gradle-plugin/commit/97be19fb90487abe815d30950f986345d9e0367e))
+
 ## [0.6.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.5.2...v0.6.0) (2026-05-11)
 
 
