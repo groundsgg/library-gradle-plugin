@@ -33,8 +33,6 @@ val versionOverride = project.findProperty("versionOverride") as? String
 
 version = versionOverride ?: "local-SNAPSHOT"
 
-repositories { mavenCentral() }
-
 kotlin { jvmToolchain(25) }
 
 spotless {
