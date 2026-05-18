@@ -53,7 +53,7 @@ fun Project.configureVelocityRuntimeConvention(flavor: RuntimeConventionFlavor) 
 private fun Project.configureRuntimeFlavor(flavor: RuntimeConventionFlavor) {
     val extension = extensions.create<GroundsRuntimeExtension>("groundsRuntime")
     extension.runtimeVersion.convention(
-        providers.gradleProperty("groundsRuntime.version").orElse("0.1.0")
+        providers.gradleProperty("groundsRuntime.version").orElse("0.1.1")
     )
 
     when (flavor) {
