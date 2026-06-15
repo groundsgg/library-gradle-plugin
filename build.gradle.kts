@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.embeddedKotlinVersion
 
 plugins {
-    id("com.diffplug.spotless") version "8.5.1"
+    id("com.diffplug.spotless") version "8.6.0"
     `java-gradle-plugin`
     `maven-publish`
     `kotlin-dsl`
@@ -21,7 +21,7 @@ dependencies {
     implementation(
         "org.jetbrains.kotlin.kapt:org.jetbrains.kotlin.kapt.gradle.plugin:$embeddedKotlinVersion"
     )
-    implementation("com.diffplug.spotless:com.diffplug.spotless.gradle.plugin:8.5.1")
+    implementation("com.diffplug.spotless:com.diffplug.spotless.gradle.plugin:8.6.0")
     implementation("com.gradleup.shadow:com.gradleup.shadow.gradle.plugin:9.4.1")
     implementation(
         "com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin:6.0.9"
