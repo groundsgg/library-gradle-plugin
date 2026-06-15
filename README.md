@@ -46,6 +46,15 @@ plugins {
 }
 ```
 
+`gg.grounds.kotlin-conventions` publishes the main jar, sources jar, and Dokka-backed Javadoc jar by default. IDEs normally use the sources jar for source navigation and KDoc display; the Javadoc jar is published for Maven-compatible documentation consumers.
+
+You can disable these optional artifacts with Gradle properties:
+
+```properties
+grounds.kotlin.sourcesJar.enabled=false
+grounds.kotlin.dokka.enabled=false
+```
+
 For Paper projects:
 
 ```kotlin
