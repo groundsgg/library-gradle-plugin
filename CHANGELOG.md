@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.8.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.7.0...v0.8.0) (2026-06-15)
+
+
+### Features
+
+* publish kotlin sources and docs artifacts ([ff90841](https://github.com/groundsgg/library-gradle-plugin/commit/ff9084176676c471dcbf2213a98f86ab0e8a3e1f))
+
+
+### Bug Fixes
+
+* bump com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin ([#62](https://github.com/groundsgg/library-gradle-plugin/issues/62)) ([f30cc6c](https://github.com/groundsgg/library-gradle-plugin/commit/f30cc6ca7d0e7b5540fdfbf2f8d7620567a0c6f0))
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#61](https://github.com/groundsgg/library-gradle-plugin/issues/61)) ([ecc75da](https://github.com/groundsgg/library-gradle-plugin/commit/ecc75daedd1083c43a325313906de032d6b95c63))
+* bump the spotless group with 2 updates ([#60](https://github.com/groundsgg/library-gradle-plugin/issues/60)) ([0f081cf](https://github.com/groundsgg/library-gradle-plugin/commit/0f081cf5f521c2ab3a207e74bc9cece55ef64f65))
+
 ## [0.7.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.6.0...v0.7.0) (2026-05-18)
 
 
