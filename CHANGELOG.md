@@ -1,5 +1,22 @@
 # Changelog
 
+## [0.8.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.8.0...v0.8.1) (2026-08-27)
+
+
+### Bug Fixes
+
+* bump actions/checkout from 6 to 7 ([#65](https://github.com/groundsgg/library-gradle-plugin/issues/65)) ([36ec425](https://github.com/groundsgg/library-gradle-plugin/commit/36ec4251e317a4da9dd290322ee575eb07b5a2fd))
+* bump actions/setup-java from 5 to 6 ([#80](https://github.com/groundsgg/library-gradle-plugin/issues/80)) ([44957a5](https://github.com/groundsgg/library-gradle-plugin/commit/44957a5f20e1514f5024cde733da266a619f33c2))
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#68](https://github.com/groundsgg/library-gradle-plugin/issues/68)) ([d992ba7](https://github.com/groundsgg/library-gradle-plugin/commit/d992ba744e323d99663faf1510600ceb51b97a3d))
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#72](https://github.com/groundsgg/library-gradle-plugin/issues/72)) ([00c8ea6](https://github.com/groundsgg/library-gradle-plugin/commit/00c8ea66963f07369e4d4763370ea4709848f546))
+* bump com.gradleup.shadow:com.gradleup.shadow.gradle.plugin ([#73](https://github.com/groundsgg/library-gradle-plugin/issues/73)) ([c514a6a](https://github.com/groundsgg/library-gradle-plugin/commit/c514a6afde8317e207d401973710a1b2ca5593ee))
+* bump gradle-wrapper from 9.5.1 to 9.6.0 ([#66](https://github.com/groundsgg/library-gradle-plugin/issues/66)) ([596e158](https://github.com/groundsgg/library-gradle-plugin/commit/596e158f209b35f719aa84767903a41a22aa4fa0))
+* bump gradle-wrapper from 9.6.0 to 9.6.1 ([#69](https://github.com/groundsgg/library-gradle-plugin/issues/69)) ([7b5a410](https://github.com/groundsgg/library-gradle-plugin/commit/7b5a41050aaca3c7abbef25a9d4753b7f757c6d2))
+* bump gradle-wrapper from 9.6.1 to 9.7.1 ([#79](https://github.com/groundsgg/library-gradle-plugin/issues/79)) ([238986e](https://github.com/groundsgg/library-gradle-plugin/commit/238986e6480cc7abc942268a9725bd13c54dc062))
+* bump the spotless group across 1 directory with 2 updates ([#78](https://github.com/groundsgg/library-gradle-plugin/issues/78)) ([1b40b8f](https://github.com/groundsgg/library-gradle-plugin/commit/1b40b8fe72f15eddf80045138b0543dc020ece23))
+* bump the spotless group with 2 updates ([#64](https://github.com/groundsgg/library-gradle-plugin/issues/64)) ([d1b6e4d](https://github.com/groundsgg/library-gradle-plugin/commit/d1b6e4d31f89d92799245c386b03625a4e628af1))
+* bump the spotless group with 2 updates ([#70](https://github.com/groundsgg/library-gradle-plugin/issues/70)) ([bdd0756](https://github.com/groundsgg/library-gradle-plugin/commit/bdd07566b53dfe92a0548ecedf1d77de62b773d4))
+
 ## [0.8.0](https://github.com/groundsgg/library-gradle-plugin/compare/v0.7.0...v0.8.0) (2026-06-15)
 
 
