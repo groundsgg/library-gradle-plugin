@@ -1,7 +1,7 @@
 import org.gradle.kotlin.dsl.embeddedKotlinVersion
 
 plugins {
-    id("com.diffplug.spotless") version "8.10.0"
+    id("com.diffplug.spotless") version "8.10.1"
     `java-gradle-plugin`
     `maven-publish`
     `kotlin-dsl`
