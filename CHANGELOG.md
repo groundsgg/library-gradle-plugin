@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.8.2](https://github.com/groundsgg/library-gradle-plugin/compare/v0.8.1...v0.8.2) (2026-11-09)
+
+
+### Bug Fixes
+
+* bump com.github.gmazzo.buildconfig:com.github.gmazzo.buildconfig.gradle.plugin ([#89](https://github.com/groundsgg/library-gradle-plugin/issues/89)) ([ad284de](https://github.com/groundsgg/library-gradle-plugin/commit/ad284de76ee0eee999781114ee1eda8fec391cd0))
+* bump com.google.protobuf:com.google.protobuf.gradle.plugin ([#96](https://github.com/groundsgg/library-gradle-plugin/issues/96)) ([e4c09fa](https://github.com/groundsgg/library-gradle-plugin/commit/e4c09faab8e78727c8427a787d77a2dddc115de8))
+* bump gradle-wrapper from 9.7.1 to 9.8.1 ([#90](https://github.com/groundsgg/library-gradle-plugin/issues/90)) ([56d835a](https://github.com/groundsgg/library-gradle-plugin/commit/56d835ad9d5bd0f1f8128cb8d31f92e9a32cfa57))
+* bump gradle-wrapper from 9.8.1 to 9.8.2 ([#93](https://github.com/groundsgg/library-gradle-plugin/issues/93)) ([4bf3b98](https://github.com/groundsgg/library-gradle-plugin/commit/4bf3b9850295dee5bb955273572a4aa60157928b))
+* bump org.jetbrains.dokka-javadoc:org.jetbrains.dokka-javadoc.gradle.plugin ([#94](https://github.com/groundsgg/library-gradle-plugin/issues/94)) ([5010288](https://github.com/groundsgg/library-gradle-plugin/commit/50102882f18521aad3af35e3a882433c30b143d1))
+* bump org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin ([#95](https://github.com/groundsgg/library-gradle-plugin/issues/95)) ([0b4ec05](https://github.com/groundsgg/library-gradle-plugin/commit/0b4ec05d0b544c33a66ff0e2b9640c9ca39fbf56))
+* bump the spotless group across 1 directory with 2 updates ([#88](https://github.com/groundsgg/library-gradle-plugin/issues/88)) ([ecb29ea](https://github.com/groundsgg/library-gradle-plugin/commit/ecb29ea0dabfacc2d943d1cafee7ec3663086d67))
+
 ## [0.8.1](https://github.com/groundsgg/library-gradle-plugin/compare/v0.8.0...v0.8.1) (2026-08-27)
 
 
