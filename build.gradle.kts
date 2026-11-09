@@ -28,7 +28,7 @@ dependencies {
     )
     implementation("com.google.protobuf:com.google.protobuf.gradle.plugin:0.10.0")
     implementation("org.jetbrains.dokka:org.jetbrains.dokka.gradle.plugin:2.2.0")
-    implementation("org.jetbrains.dokka-javadoc:org.jetbrains.dokka-javadoc.gradle.plugin:2.2.0")
+    implementation("org.jetbrains.dokka-javadoc:org.jetbrains.dokka-javadoc.gradle.plugin:2.3.0")
 }
 
 val versionOverride = project.findProperty("versionOverride") as? String
